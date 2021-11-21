@@ -7,16 +7,20 @@ import { WelcomePageComponent } from './components/welcome-page/welcome-page.com
 import { LoadDataPageComponent } from './components/load-data-page/load-data-page.component';
 import { TableDataPageComponent } from './components/table-data-page/table-data-page.component';
 import { EditDataPageComponent } from './components/edit-data-page/edit-data-page.component';
-import { UploadingDataPageComponent } from './components/uploading-data-page/uploading-data-page.component';
+import { MainLayoutPageComponent } from './components/main-layout-page/main-layout-page.component';
+import { UnloadDataPageComponent } from './components/unload-data-page/unload-data-page.component';
+import { ErrorPageComponent } from './components/error-page/error-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    MainLayoutPageComponent,
     WelcomePageComponent,
     LoadDataPageComponent,
     TableDataPageComponent,
     EditDataPageComponent,
-    UploadingDataPageComponent,
+    UnloadDataPageComponent,
+    ErrorPageComponent,
   ],
   imports: [
     BrowserModule,

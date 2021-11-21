@@ -1,1 +1,18 @@
-<p>load-data-page works!</p>
+<div class="container">
+  <div class="row mt-2">
+    <div class="col text-info text-center">
+      <p>Enter your data</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <form>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="10"
+                  placeholder="data entry field..."></textarea>
+        <div class="d-grid mt-4">
+          <button [routerLink]="['/table']" class="btn btn-success" type="submit">Done</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
