@@ -10,6 +10,7 @@ import { EditDataPageComponent } from './components/edit-data-page/edit-data-pag
 import { MainLayoutPageComponent } from './components/main-layout-page/main-layout-page.component';
 import { UnloadDataPageComponent } from './components/unload-data-page/unload-data-page.component';
 import { ErrorPageComponent } from './components/error-page/error-page.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { ErrorPageComponent } from './components/error-page/error-page.component
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

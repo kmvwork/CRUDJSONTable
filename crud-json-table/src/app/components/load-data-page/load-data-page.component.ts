@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {FormControl, FormGroup, Validators} from "@angular/forms";
+import {MyValidators} from "../../shared/my.validators";
 
 @Component({
   selector: 'app-load-data-page',
@@ -7,9 +9,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoadDataPageComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
 
+  dataForm = new FormGroup({
+    dataInput: new FormControl('', [
+      Validators.required,
+      MyValidators.noTypeJSON,
+    ])
+  })
+
+  get dataInput() {
+    return this.dataForm.get('dataInput')
+  }
+
+
+  onSubmit() {
+    console.log('Submit', this.dataForm.value)
+    console.log('Submit', this.dataForm)
+  }
 }

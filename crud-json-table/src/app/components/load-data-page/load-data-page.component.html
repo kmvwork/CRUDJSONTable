@@ -6,11 +6,22 @@
   </div>
   <div class="row">
     <div class="col">
-      <form>
+      <form [formGroup]="dataForm" (ngSubmit)="onSubmit()">
         <textarea class="form-control" id="exampleFormControlTextarea1" rows="10"
-                  placeholder="Data entry field..."></textarea>
+                  placeholder="Data entry field..." formControlName='dataInput'></textarea>
+        <div class="alert alert-danger mt-2" role="alert" *ngIf="dataInput?.invalid && (dataInput?.dirty || dataInput?.touched)">
+          <div *ngIf="dataInput?.errors?.['required']">
+            Data is required.
+          </div>
+          <div *ngIf="dataInput?.errors?.['noTypeJSON']">
+            The data is not in the format JSON.
+          </div>
+        </div>
         <div class="d-grid mt-4">
-          <button [routerLink]="['/table']" class="btn btn-success text-uppercase" type="submit">Done</button>
+          <button class="btn btn-success text-uppercase" type="submit"
+                  [disabled]="dataForm.invalid">Done
+          </button>
+          <!--          [routerLink]="['/table']"-->
         </div>
       </form>
     </div>
