@@ -16,12 +16,15 @@
           <div *ngIf="dataInput?.errors?.['noTypeJSON']">
             The data is not in the format JSON.
           </div>
+          <div *ngIf="dataInput?.errors?.['differentStructure']">
+            The structure of the input data does not match.
+          </div>
         </div>
         <div class="d-grid mt-4">
           <button class="btn btn-success text-uppercase" type="submit"
                   [disabled]="dataForm.invalid">Done
           </button>
-          <!--          [routerLink]="['/table']"-->
+
         </div>
       </form>
     </div>

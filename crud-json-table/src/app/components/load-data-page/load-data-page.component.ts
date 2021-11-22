@@ -19,6 +19,7 @@ export class LoadDataPageComponent implements OnInit {
     dataInput: new FormControl('', [
       Validators.required,
       MyValidators.noTypeJSON,
+      MyValidators.differentStructure
     ])
   })
 
